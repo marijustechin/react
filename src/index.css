@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply py-2 px-5 bg-violet-500 text-white font-semibold rounded-full shadow-md hover:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-400 focus:ring-opacity-75;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 2px 2px #0f172a;
+  }
+
+  .animate-slide-in {
+    @keyframes slide-in {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  }
+
+  .animate-slide-out {
+    @keyframes slide-out {
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+    }
+  }
+}
